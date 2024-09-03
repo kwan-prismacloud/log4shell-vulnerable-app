@@ -31,7 +31,7 @@ jobs:
         with:
           output_format: cli,sarif
           output_file_path: console,results.sarif
-          api-key: ${{ secrets.secrets.PRISMA_CLOUD_ACCESS_KEY }}::${{ secrets.PRISMA_CLOUD_SECRET_KEY }}
+          api-key: '${{ secrets.secrets.PRISMA_CLOUD_ACCESS_KEY }}::${{ secrets.PRISMA_CLOUD_SECRET_KEY }}'
           directory: '.'
           soft_fail: true
           use_enforcement_rules: false
