@@ -1,4 +1,4 @@
-name: Prisma Cloud IaC Scan
+name: CI - scan and build image
 
 on:
   push:
