@@ -31,7 +31,8 @@ jobs:
         with:
           output_format: cli,sarif
           output_file_path: console,results.sarif
-          api-key: '${{ secrets.PRISMA_CLOUD_ACCESS_KEY }}::${{ secrets.PRISMA_CLOUD_SECRET_KEY }}'
+          api-key: ${{ secrets.BC_API_KEY }}
+          prisma-api-url: ${{ secrets.PRISMA_CLOUD_API_URL }}
           directory: '.'
           soft_fail: true
           use_enforcement_rules: false
