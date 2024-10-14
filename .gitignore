@@ -2,3 +2,13 @@
 build/
 .idea
 .gradle
+iac/terraform/pc-cutom-policy/.prismacloud_auth.json
+**/.DS_Store
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform.tfstate.lock.info
+.terraform.lock.hcl
+
