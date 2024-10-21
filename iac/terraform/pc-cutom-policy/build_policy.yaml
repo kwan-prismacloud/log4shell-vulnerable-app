@@ -1,0 +1,16 @@
+---
+metadata:
+  name: "Kathy's sample custom build policy created with terraform"
+  # id: "CKV2_CUSTOM_KWAN_1"
+  category: "storage"
+  guidelines: "this is a guideline"
+  severity: "high"
+scope:
+  provider: "aws"
+definition:
+  cond_type: "attribute"
+  resource_types:
+  - "aws_s3_bucket_public_access_block"
+  attribute: "block_public_acls"
+  operator: "equals"
+  value: "true"
