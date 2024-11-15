@@ -43,6 +43,12 @@ Resources:
       Tags: 
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-ec2" 
+        - Key: git_org
+          Value: kwan-prismacloud
+        - Key: yor_trace
+          Value: 9610b6dc-2e24-4df0-9756-c2ea5110b7f4
+        - Key: git_repo
+          Value: log4shell-vulnerable-app
       UserData: 
         Fn::Base64: |
           #!/bin/bash
@@ -59,7 +65,6 @@ Resources:
   ############
   ###  S3  ###
   ############
-
   DataBucket:
     # Public, not encrypted, no access logs, no versioning
     # checkov:skip=CKV_AWS_56: not needed
@@ -71,6 +76,12 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+        - Key: yor_trace
+          Value: 569913d6-c563-433f-a3b8-7f008607af2e
+        - Key: git_repo
+          Value: log4shell-vulnerable-app
+        - Key: git_org
+          Value: kwan-prismacloud
 
 Outputs:
   EC2PublicDNS:
