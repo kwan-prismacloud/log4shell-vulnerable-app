@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube Analysis') {
     withSonarQubeEnv() {
-      sh "./gradlew sonar"
+      sh "./gradlew sonar —no-watch-fs"
     }
   }
 }
