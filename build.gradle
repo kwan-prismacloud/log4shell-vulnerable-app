@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id "org.sonarqube" version "6.0.1.5171"
 }
 
 group = 'fr.christophetd.log4shell'
@@ -22,4 +23,11 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "kwan-prismacloud_log4shell-vulnerable-app_cb84b92a-a84d-40be-b2b9-5e09f7c336e9"
+    property "sonar.projectName", "log4shell-vulnerable-app"
+  }
 }
