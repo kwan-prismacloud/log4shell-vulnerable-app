@@ -3,18 +3,17 @@ node {
     checkout scm
   }
   stage('Build') {
-    tool {
-            jdk "jdk8" 
-        }
-        steps {
-            sh './gradlew build'
-        }
-    }
-  stage('SonarQube analysis') {
-      tool {
-          jdk "jdk8" 
+    environment {
+          JAVA_HOME = tool 'jdk8'
+          scannerHome = tool 'sonarqube' 
       }
+    steps {
+        sh './gradlew build'
+    }
+  }
+  stage('SonarQube analysis') {
       environment {
+          JAVA_HOME = tool 'jdk11'
           scannerHome = tool 'sonarqube' 
       }
       steps {
