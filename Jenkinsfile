@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('Build') {
-    tools {
+    tool {
             jdk "jdk8" 
         }
         steps {
@@ -11,7 +11,7 @@ node {
         }
     }
   stage('SonarQube analysis') {
-      tools {
+      tool {
           jdk "jdk8" 
       }
       environment {
