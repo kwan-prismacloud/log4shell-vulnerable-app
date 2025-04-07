@@ -11,3 +11,4 @@ iac/terraform/pc-cutom-policy/.prismacloud_auth.json
 *.tfvars.json
 .terraform.tfstate.lock.info
 .terraform.lock.hcl
+**/.java-version
