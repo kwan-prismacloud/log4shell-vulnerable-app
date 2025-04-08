@@ -14,12 +14,9 @@ node {
   stage('SonarQube analysis') {
       environment {
           JAVA_HOME = tool 'jdk11'
-          scannerHome = tool 'sonarqube' 
       }
-      steps {
-          withSonarQubeEnv(installationName: 'SonarQube') {
+      withSonarQubeEnv(installationName: 'sonarqube') {
               sh './gradlew sonar'
-          }
       }
   }
 }
